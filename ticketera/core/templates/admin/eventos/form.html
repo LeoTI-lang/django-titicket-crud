@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Registro de eventos</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success" type="submit">Guardar evento</button>
+</form>
+{% if form.errors %}
+        <div class="alert alert-danger">
+            <strong>El formulario tiene errores:</strong>
+            {{ form.errors }}
+        </div>
+{% endif %}
+
+{% endblock %}

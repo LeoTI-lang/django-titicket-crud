@@ -1,0 +1,23 @@
+core/
+│
+├── templates/
+│   ├── base.html
+│   ├── registro.html
+│   ├── carrito.html
+│   │
+│   ├── eventos/
+│   │   ├── lista.html
+│   │   └── detalle.html
+│   │
+│   ├── admin/
+│   │   ├── productoras/
+│   │   │   ├── lista.html
+│   │   │   └── form.html
+│   │   │
+│   │   ├── eventos/
+│   │   │   ├── form.html
+│   │   │   └── tickets.html
+│   │   │
+│   │   └── ubicaciones/
+│   │       ├── lista.html
+│   │       └── form.html

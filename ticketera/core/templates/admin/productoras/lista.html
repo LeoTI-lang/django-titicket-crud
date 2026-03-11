@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<h2>Productoras</h2>
+<a href="{% url 'crear_productora' %}" class="btn btn-primary mb-3">Agregar productora</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Rol</th>
+            <th>Razón social</th>
+            <th>Direccion</th>
+            <th>Comuna</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Giro</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in productoras %}
+            <tr>
+                <td>{{ p.rut }}</td>
+                <td>{{ p.nombre }}</td>
+                <td>{{ p.direccion }}</td>
+                <td>{{ p.comuna }}</td>
+                <td>{{ p.telefono }}</td>
+                <td>{{ p.email }}</td>
+                <td>{{ p.giro }}</td>
+                <td><a href="{% url 'editar_productora' p.id %}" class="btn btn-warning">Editar</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    
+
+
+</table>
+
+{% endblock %}
